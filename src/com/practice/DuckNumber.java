@@ -1,7 +1,7 @@
 package com.practice;
 
 import java.util.Scanner;
-/* What is a Duck Number?
+/* gitWhat is a Duck Number?
 A Duck Number is a number that:
 Contains at least one zero (0)
 But does NOT start with zero
