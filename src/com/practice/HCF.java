@@ -2,20 +2,20 @@ package com.practice;
 
 import java.util.Scanner;
 
-public class LCM {
+public class HCF {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter first number: ");
+		System.out.println("Enter 1st Number: ");
 		int a=sc.nextInt();
-		System.out.println("Enter second number: ");
+		System.out.println("Enter 2nd Number: ");
 		int b=sc.nextInt();
-		int max=(a>b)?a:b;
+		int min=(a<b)?a:b;
 		while(true) {
-			if(max%a==0 && max%b==0) {
-				System.out.println("LCM: "+max);
+			if(a%min==0 && b%min==0) {
+				System.out.println("HCF: "+min);
 				break;
 			}
-			max++;
+			min--;
 		}
 	}
 
