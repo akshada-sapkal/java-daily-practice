@@ -4,24 +4,22 @@ import java.util.Scanner;
 public class PrimeRange {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		int s=sc.nextInt();
-		int e=sc.nextInt();
-		while(s<=e) {
-			int den=2;
-			
-			while(den<s) {
-				if(s%den==0) {
-					break;
+		System.out.println("Enter Start: ");
+		int start=sc.nextInt();
+		System.out.println("Enter End: ");
+		int end=sc.nextInt();
+		for(int i=start;i<=end;i++) {
+			int count=0;
+			for(int j=1;j<=i;j++) {
+				if(i%j==0) {
+					count++;
 				}
-				den++;
 			}
-			
-				if(den==s || s==2) {
-					System.out.println(s);
-				}
-				s++;
+			if(count==2) {
+				System.out.println(i);
 			}
 		}
 		
 	}
+}
 
