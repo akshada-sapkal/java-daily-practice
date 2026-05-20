@@ -12,6 +12,5 @@ public class MergeArray {
 		for(int j=0;j<ar.length;j++) {
 			c[mem]=ar[j];
 		}
-		
 	}
 }
