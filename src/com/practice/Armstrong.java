@@ -6,24 +6,25 @@ public class Armstrong {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
-		int power=0;
+		int originalNum=n;
+		int pow=0;
 		int sum=0;
 		while(n>0) {
 			n=n/10;
-			power++;
+			pow++;
 		}
-		System.out.println("Power: "+power);
-		int num2=n;
+		System.out.println("Power of given number is :"+pow);
+		n=originalNum;
 		while(n>0) {
-			int num=n%10;
-			int pow= (int)Math.pow(num, power);
-			sum=sum+pow;
+			int rem=n % 10;
+			int power=(int) Math.pow(rem, pow);
+			sum=sum+power;
 			n=n/10;
 		}
-		if(num2==sum) {
-			System.out.println("Armstrong");
+		if(originalNum==sum) {
+			System.out.println(originalNum+" is the Armstrong Number");
 		}else {
-			System.out.println("Not Armstrong");
+			System.out.println(originalNum+" is not Armstrong Number");
 		}
 	}
 

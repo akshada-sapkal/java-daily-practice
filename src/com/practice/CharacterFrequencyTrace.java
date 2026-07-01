@@ -1,12 +1,16 @@
 package com.practice;
 
+import java.util.Scanner;
+
 public class CharacterFrequencyTrace {
 	public static void main(String[] args) {
-		String str="programming";
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the String to count character frequency: ");
+		String str=sc.next();
 		while(str.length()>0) {
 			char ch=str.charAt(0);
-			int count=0;
 			String temp="";
+			int count=0;
 			for(int i=0;i<str.length();i++) {
 				if(str.charAt(i)==ch) {
 					count++;
@@ -14,9 +18,13 @@ public class CharacterFrequencyTrace {
 					temp=temp+str.charAt(i);
 				}
 			}
-			System.out.println("Frequency of "+ch+" = "+count);
+			System.out.println(ch+" "+count);
 			str=temp;
+			
 		}
+		
+		
+		
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*Problem Statement – Find Book Availability
@@ -50,6 +51,7 @@ Book ID 5 does not exist in the library.*/
 public class BookAvailability {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Number of Books: ");
 		int n=sc.nextInt();
 		int[] id=new int[n];
 		String[] title=new String[n];
@@ -57,6 +59,7 @@ public class BookAvailability {
 			id[i]=sc.nextInt();
 			title[i]=sc.next();
 		}
+		System.out.println("Enter the id of book that to be search: ");
 		int searchId=sc.nextInt();
 		boolean found=false;
 		for(int i=0;i<n;i++) {
@@ -67,7 +70,7 @@ public class BookAvailability {
 			}
 		}
 		if(!found) {
-			System.out.println("Not available");
+			System.out.println("Not Available");
 		}
 		
 	}

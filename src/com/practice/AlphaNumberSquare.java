@@ -7,10 +7,10 @@ public class AlphaNumberSquare {
 		int num=1;
 		for(int i=1;i<=n;i++) {
 			for(int j=1;j<=n;j++) {
-				if(j%2 !=0) {
-					System.out.print((ch++)+" ");
+				if(j % 2 !=0) {
+					System.out.print(ch++ +" ");
 				}else {
-					System.out.print((num++)+" ");
+					System.out.print(num++ +" ");
 				}
 			}
 			System.out.println();
